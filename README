@@ -1,0 +1,11 @@
+WIG
+===
+
+Wig is a WYSIWYG editor that consists of a series of interface hacks on top of
+a stripped down/forked Aloha-Editor.
+
+
+LICENSE
+=======
+
+AGPLv3. (Same as Aloha)

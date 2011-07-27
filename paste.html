@@ -1,0 +1,94 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Paste test</title>
+<style>
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+q:before,q:after{content:'';}
+a, a:link, a:visited, a:active, a:hover {outline: none;}
+
+html {font-size: 14px; line-height: 1.4; font-family: helvetica neue, arial, sans-serif; background-color: #fff; color: #333;}
+
+body {padding: 6em;}
+
+p, h1, h2, h3, h4, h5, h6, ul, ol, li {margin-bottom: 20px; font-weight: normal; line-height: 1.4;}
+h1 {font-size: 1.9em;}
+h2 {font-size: 1.4em;}
+h3 {font-size: 1.2em;}
+h4 {font-variant: small-caps; font-weight: bold;}
+h5 {font-variant: small-caps;}
+h6 {color: #999;}
+ul li {list-style-type: disc; list-style-position: inside;}
+ol li {list-style-type: decimal; list-style-position: inside;}
+ul ul, ol ol, ul ol, ol ul {margin-left: 20px; margin-top: 20px;}
+ul ul li {list-style-type: circle;}
+ul ul ul li {list-style-type: square;}
+p + h1 {margin-top: 40px;}
+strong, b {font-weight: bold;}
+em, i {font-style: italic;}
+img {display: block; max-width: 100%;}
+a.img {display: block;}
+img.left, a.img-left {float: left;}
+img.right, a.img-right {float: right;}
+img.center, a.img-center {display: block; margin: 0 auto;}
+
+.editable:focus {outline: none;}
+
+a, a:visited {color: blue;}
+
+</style>
+<link rel="stylesheet" href="src/wig.css">
+<style>
+.editable {padding: 20px; padding-bottom: 0; border: 2px solid #eee;}
+.row {overflow: hidden; margin-top: 20px;}
+#before {width: 48%; float: left; font-size: 12px; overflow: auto;}
+#after {width: 48%; float: right; font-size: 12px; overflow: auto;}
+</style>
+<script src="dep/jquery-1.4.4.min.js"></script>
+<!--<script src="src/aloha/jquery.js"></script>
+<script src="src/aloha/lang.js"></script>
+<script src="src/aloha/range.js"></script>
+<script src="src/aloha/position.js"></script>
+<script src="src/aloha/dom.js"></script>
+<script src="src/aloha/core.js"></script>
+<script src="src/aloha/editable.js"></script>
+<script src="src/aloha/event.js"></script>
+<script src="src/aloha/ierange-m2.js"></script>
+<script src="src/aloha/jquery.aloha.js"></script>
+<script src="src/aloha/log.js"></script>
+<script src="src/aloha/markup.js"></script>
+<script src="src/aloha/selection.js"></script>-->
+<script src="src/aloha/combined.js"></script>
+<script src="src/clean.js"></script>
+<script src="src/wig.js"></script>
+<script>
+$(document).ready(function() {
+GENTICS.Aloha.settings.errorhandling = false;
+GENTICS.Aloha.settings.logLevels = {
+    error: true,
+    warn: true,
+    info: true//,
+    //debug: true
+};
+$('.editable').wig();
+});
+</script>
+</head>
+
+<body>
+<div class="editable"><p><br class="GENTICS_ephemera" /></p></div>
+<div class="row row-2">
+<div class="column" id="before">
+</div>
+<div class="column" id="after">
+</div>
+</div>
+</body>
+</html>

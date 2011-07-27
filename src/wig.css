@@ -1,0 +1,117 @@
+.editable {min-height: 200px; font-size: 14px; overflow: hidden;}
+.editable:focus {outline: none;}
+.editable img {max-width: 100%; height: auto;}
+.editable p,
+.editable h1,
+.editable h2,
+.editable h3,
+.editable h4,
+.editable h5,
+.editable h6,
+.editable ul,
+.editable ol,
+.editable li {min-height: 1.4em; margin: 0; padding: 15px; font-weight: normal; clear: both; border: none; background-color: inherit; font-style: normal; text-align: left; font-variant: normal; letter-spacing: normal;}
+.editable ul,
+.editable ol {padding: 0;}
+.editable h1 {font-size: 1.9em;}
+.editable h2 {font-size: 1.4em;}
+.editable h3 {font-size: 1.2em;}
+.editable h4 {font-variant: small-caps; font-weight: bold;}
+.editable h5 {font-variant: small-caps;}
+.editable h6 {color: #999;}
+.editable ul li {list-style-type: disc; list-style-position: inside;}
+.editable ol li {list-style-type: decimal; list-style-position: inside;}
+.editable ul ul,
+.editable ol ol,
+.editable ul ol,
+.editable ol ul {margin-left: 15px; margin-top: 15px;}
+.editable ul ul li {list-style-type: circle;}
+.editable ul ul ul li {list-style-type: square;}
+.editable li li {padding-right: none;}
+.editable strong, .editable b {font-weight: bold; color: inherit;}
+.editable em, .editable i {font-style: italic; color: inherit;}
+.editable a, .editable a:visited {color: blue; text-decoration: underline;}
+
+
+.wig-dialog {position: absolute; z-index: 100; display: none;}
+.wig-contents {background-color: #d6d6d6; padding: 3px; font-size: 13px;}
+.wig-contents {box-shadow: 0 5px 10px #ccc; -webkit-box-shadow: 0 5px 10px #ccc; -moz-box-shadow: 0 5px 10px #ccc;
+border-radius: 3px; -moz-border-radius: 3px; -webkit-border-radius: 3px;}
+
+.wig-contents {overflow: hidden;}
+
+.wig-block-code {clear: both; padding: 15px; position: relative; padding-right: 45px;}
+.wig-block-code .wig-add-paragraphs {padding: 3px 0; position: absolute; top: 10px; right: 10px;}
+.wig-block-code span {cursor: pointer; padding: 3px; border: 1px solid #fff; border-radius: 3px; line-height: 1.1; display: inline-block;}
+.wig-block-code span:hover {border: 1px solid #666;}
+.wig-inline-code {}
+
+.wig-dialog input[type=text] {display: block; border: 1px solid #ccc; font-size: 13px; width: 100%; padding: 0.75em; margin: 0; height: auto;}
+.wig-code textarea {display: block; border: 1px solid #d6d6d6; font-size: 13px; font-family: monospace; width: 100%; padding: 0.75em; margin: 0; height: 14em;}
+.wig-dialog input[type=text]:focus,
+.wig-code textarea:focus {background-color: #ffc; outline: none;}
+.wig-dialog input[type=text],
+.wig-code textarea {
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.wig-code textarea {-webkit-border-radius: 0; -moz-border-radius: 0; border-radius: 0;}
+
+/*.wig-code textarea {background-color: #ffe;}*/
+
+.wig-dialog input[type=text],
+.wig-code input[type=text] {width: 300px; font-family: helvetica neue, arial, sans-serif;}
+
+.wig-arrow-above {border: 10px solid transparent; border-bottom-color: #d6d6d6; width: 0; margin: 0 auto; border-top: none;}
+.wig-arrow-below {border: 10px solid transparent; border-top-color: #d6d6d6; width: 0; margin: 0 auto; border-bottom: none;}
+
+.wig-right-dialog .wig-inner {padding-left: 10px; position: relative;}
+.wig-arrow-left {border: 10px solid transparent; border-right-color: #d6d6d6; width: 0; border-left: none; position: absolute; left: 0;}
+
+.wig-left-dialog .wig-inner {padding-right: 10px; position: relative;}
+.wig-arrow-right {border: 10px solid transparent; border-left-color: #d6d6d6; width: 0; border-right: none; position: absolute; right: 0;}
+
+.editable .wig-selected-block,
+.editable .wig-selected-li {background-color: #ffc;}
+
+.wig-button {cursor: pointer; padding: 3px; border: 1px solid #d6d6d6; min-width: 1em; text-align: center; border-radius: 3px; line-height: 1.1;}
+.wig-button-selected {background-color: #fff; border: 1px solid #fff;}
+.wig-button:hover {border: 1px solid #666;}
+.wig-button-b {font-weight: bold;}
+.wig-button-i {font-style: italic;}
+.wig-button-a {color: blue; text-decoration: underline;}
+
+.wig-horizontal-dialog .wig-button {float: left;}
+.wig-vertical-dialog .wig-button {display: block;}
+
+.wig-horizontal-dialog .wig-button + .wig-button {margin-left: 1px;}
+.wig-vertical-dialog .wig-button + .wig-button {margin-top: 1px;}
+
+.wig-dialog h1 {font-size: 13px; margin-bottom: 0.5em; font-weight: bold;}
+
+#wig-link-dialog .wig-contents {padding: 0.75em;}
+#wig-insert-image-dialog .wig-contents {max-width: 200px; max-height: 200px; overflow: auto;}
+
+#wig-insert-image-dialog ul {margin: 0; padding: 0; min-width: 40px; min-height: 40px;}
+#wig-insert-image-dialog li {margin: 0; margin: 3px; padding: 2px; vertical-align: middle; width: 30px; height: 30px; float: left; list-style-type: none; text-align: center; cursor: pointer;}
+#wig-insert-image-dialog li:hover {background-color: #eee;}
+#wig-insert-image-dialog img {display: inline-block; cursor: pointer;}
+
+#wig-edit-image-dialog ul {margin: 0; padding: 0; margin-bottom: 10px;}
+#wig-edit-image-dialog li {list-style-type: none; margin: 0; padding: 0; margin-bottom: 5px;}
+#wig-edit-image-dialog span {cursor: pointer; padding: 3px; border: 1px solid #d6d6d6; border-radius: 3px; line-height: 1.1; display: inline-block;}
+#wig-edit-image-dialog span:hover {border: 1px solid #666;}
+#wig-edit-image-dialog .wig-selected span {background-color: #bbb; border: 1px solid #bbb;}
+#wig-edit-image-dialog .wig-contents {padding: 0.75em;}
+#wig-edit-image-dialog .wig-sizes {width: 50%; float: left;}
+#wig-edit-image-dialog .wig-field {clear: both;}
+#wig-edit-image-dialog .wig-field {margin-bottom: 0.5em;}
+#wig-edit-image-dialog .wig-alignment {width: 50%; float: right;}
+#wig-edit-image-dialog label {width: 30px; display: inline-block; font-weight: bold;}
+#wig-edit-image-dialog input[type=text] {width: 250px; display: inline-block}
+
+.wig-dialog .wig-add-paragraphs {float: left;}
+.wig-delete {cursor: pointer; text-decoration: underline; text-align: right;}
+
+.editable img {cursor: pointer;}

@@ -1,0 +1,122 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Wig</title>
+<style>
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,form,fieldset,input,p,blockquote,th,td{margin:0;padding:0;}
+table{border-collapse:collapse;border-spacing:0;}
+fieldset,img{border:0;}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal;}
+ol,ul {list-style:none;}
+caption,th {text-align:left;}
+h1,h2,h3,h4,h5,h6{font-size:100%;}
+q:before,q:after{content:'';}
+a, a:link, a:visited, a:active, a:hover {outline: none;}
+
+html {font-size: 14px; line-height: 1.4; font-family: helvetica neue, arial, sans-serif; background-color: #eee; color: #333;}
+
+body {padding: 6em; max-width: 640px;}
+
+.editable {background-color: #fff;}
+
+/* don't allow images to stretch outside of content */
+img {max-width: 100%;}
+/* left-aligned images or left-aligned and linked images */
+img.left, a.img-left {float: left; margin-bottom: 20px; margin-right: 20px;}
+/* right-aligned images or right-aligned and linked images */
+img.right, a.img-right {float: right; margin-bottom: 20px; margin-left: 20px;}
+/* centered images or center-aligned linked images */
+img.center, a.img-center, a.img-center img {display: block; margin: 0 auto; float: none;}
+img.center, a.img-center {margin-bottom: 20px;}
+/* linked images shouldn't also be floating */
+a.img-left img, a.img-right img {display: block; float: none; margin: 0; padding: 0;}
+
+.editable {min-height: 500px;}
+.editable:focus {outline: none;}
+
+.editable p {min-height: 1.4em;}
+
+a, a:visited {color: blue;}
+
+</style>
+<link rel="stylesheet" href="src/wig.css">
+<script src="dep/jquery-1.4.4.min.js"></script>
+<!--<script src="src/aloha/jquery.js"></script>
+<script src="src/aloha/lang.js"></script>
+<script src="src/aloha/range.js"></script>
+<script src="src/aloha/position.js"></script>
+<script src="src/aloha/dom.js"></script>
+<script src="src/aloha/core.js"></script>
+<script src="src/aloha/editable.js"></script>
+<script src="src/aloha/event.js"></script>
+<script src="src/aloha/ierange-m2.js"></script>
+<script src="src/aloha/jquery.aloha.js"></script>
+<script src="src/aloha/log.js"></script>
+<script src="src/aloha/markup.js"></script>
+<script src="src/aloha/selection.js"></script>-->
+<script src="src/aloha/combined.js"></script>
+<script src="src/clean.js"></script>
+<script src="src/wig.js"></script>
+<script>
+GENTICS.Aloha.settings.errorhandling = false;
+GENTICS.Aloha.settings.logLevels = {
+    error: true,
+    warn: true,
+    info: true//,
+    //debug: true
+};
+$(document).ready(function() {
+    //$.get('images.json', function(data, textStatus) {
+        //data = JSON.parse(data);
+        //$('.editable').data('images', data.images);
+        $('.editable').data('images', []);
+        $('.editable').wig({
+            'validImageDomains': ['media.ammo.dev']
+        });
+        setTimeout(function() {
+        GENTICS.Aloha.editables[0].activate();
+        GENTICS.Aloha.activeEditable.obj[0].focus();
+        GENTICS.Utils.Dom.setCursorInto($('.editable p')[0]);
+        GENTICS.Aloha.Selection.updateSelection();
+        }, 100);
+    //});
+});
+</script>
+</head>
+
+<body>
+
+<div class="editable">
+<p><br class="GENTICS_ephemera"></p>
+<!--
+<p>Hello</p>
+<p>There should be a widget here</p>
+<widget>[[Images]]</widget>
+<p>And some text.</p>
+<p><img src="http://media.ammo.dev/o/d7dbbf97d5b7.jpg" width="800" height="533" class="center"></p>
+<p>And more text</p>
+<p><br class="GENTICS_ephemera"/></p>-->
+<!--
+<p><img src="http://media.ammo.dev/o/d7dbbf97d5b7.jpg" width="800" height="533" class="center">/p>
+
+<p><img src="http://media.ammo.dev/o/d7dbbf97d5b7.jpg" width="800" height="533" class="center"></p>
+<p><img src="http://media.ammo.dev/o/71bc19934c22.jpg" width="220" height="337" class="left">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis bibendum euismod lorem eu pellentesque. Integer a sem lectus. Ut sed consequat erat. Nullam eget nunc at dui imperdiet porta at sit amet quam. Cras suscipit dolor in risus consectetur quis posuere mi tincidunt. Donec lobortis, lacus quis condimentum tempor, sapien mauris molestie ipsum, at ultricies leo sapien a turpis. Quisque facilisis, ligula sit amet convallis mattis, sem ligula placerat velit, a pulvinar sem orci lobortis sem. Sed eu eros tristique lorem varius dignissim. Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Donec malesuada consectetur elementum. Sed a rhoncus nibh. Suspendisse at dolor vitae turpis malesuada fringilla. Mauris hendrerit est sed urna posuere non varius velit interdum. Nam suscipit laoreet turpis, vitae auctor magna bibendum et.</p>
+
+<REPLACEMEscript src="http://www.gmodules.com/ig/ifr?url=http://www.google.com/ig/modules/translatemypage.xml&up_source_language=en&w=160&h=60&title=&border=&output=js"></REPLACEMEscript>
+
+<p>Vestibulum varius viverra quam vel ultrices. Vestibulum sed ipsum metus. Nullam porta commodo nulla vel tempor. Sed in nisi at sem ornare sodales. Sed mauris augue, tristique vitae gravida vitae, rutrum non orci. Integer viverra sem feugiat purus tempor nec faucibus lectus commodo. Cras rutrum, diam et rhoncus auctor, velit nulla vehicula magna, sed adipiscing tortor elit malesuada nisi. Morbi ac neque ac nibh congue ultrices sit amet at elit. Nulla facilisi. Mauris velit diam, varius blandit placerat sit amet, mattis eu lorem. In pellentesque mattis tristique. Duis ultrices consectetur massa id laoreet. Nam tellus dui, iaculis sed consectetur in, venenatis nec risus. Nunc eros felis, sodales at viverra venenatis, porta nec tortor.</p>
+
+<REPLACEMEiframe width="460" height="237" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" src="http://maps.google.com/maps?ie=UTF8&ll=-33.913734,18.450165&spn=0.17038,0.270882&z=12&output=embed&s=AARTsJqzARj-Z8VnW5pkPMLMmZbqrJcYpw"></REPLACEMEiframe><br /><small><a href="http://maps.google.com/maps?ie=UTF8&ll=-33.913734,18.450165&spn=0.17038,0.270882&z=12&source=embed" style="color:#0000FF;text-align:left">View Larger Map</a></small>
+
+dsfsdfsdfsdfsdf
+
+<REPLACEMEobject width="400" height="320"><REPLACEMEparam name="allowfullscreen" value="true" /><REPLACEMEparam name="allowscriptaccess" value="always" /><REPLACEME\param name="movie" value="http://vimeo.com/moogaloop.swf?clip_id=3564620&server=vimeo.com&show_title=1&show_byline=1&show_portrait=0&color=&fullscreen=1" /><REPLACEMEembed src="http://vimeo.com/moogaloop.swf?clip_id=3564620&server=vimeo.com&show_title=1&show_byline=1&show_portrait=0&color=&fullscreen=1" type="application/x-shockwave-flash" allowfullscreen="true" allowscriptaccess="always" width="400" height="320" /></REPLACEMEembed></REPLACEMEobject>
+-->
+
+
+
+</div>
+
+</body>
+</html>

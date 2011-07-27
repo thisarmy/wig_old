@@ -1,0 +1,30 @@
+Cleaned up style:
+
+* All tabs replaced with 4 spaces and I tried to deal with the fallout caused by that.
+* no space between 'function' and '('
+    (but this is not crockford-compliant)
+* *//* -> */\n\n/*
+* removed some trailing whitespace
+* standardized on new Array() rather than mix with []
+    (but this is not crockford-compliant. at least it is consistent now.)
+* standardized on new Object() rather than mix with {}
+    (ditto)
+
+
+Removed things I didn't need:
+
+* Extjs
+* Repository
+* Plugin
+* Ribbon
+* FloatingMenu
+* i18n (because there's now no UI in the core)
+* commented out code
+* code that's no longer referenced (already marked as moved with a TODO)
+* all plugins
+* standardized on $.trim() and $.inArray()
+
+
+Minor little hacks here and there:
+
+* enter inside empty list element didn't work for my test data
