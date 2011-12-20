@@ -100,7 +100,7 @@ GENTICS.Aloha.prototype.readyCallbacks = [];
 /**
  * Initialize Aloha
  * called automatically by the loader
- * @event the "ready" event is triggered as soon as Aloha has finished it's initialization process
+ * @event the "alohaready" event is triggered as soon as Aloha has finished it's initialization process
  * @hide
  */
 GENTICS.Aloha.prototype.init = function() {
@@ -187,7 +187,7 @@ GENTICS.Aloha.prototype.init = function() {
     }
 
     GENTICS.Aloha.EventRegistry.trigger(
-        new GENTICS.Aloha.Event("ready", GENTICS.Aloha, null)
+        new GENTICS.Aloha.Event("alohaready", GENTICS.Aloha, null)
     );
 };
 
